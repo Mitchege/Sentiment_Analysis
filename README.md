@@ -18,7 +18,11 @@ The data is provided by [CrowdFlower](https://data.world/crowdflower) and is ava
 
 * Preprocess the text data: First, some columns that would not be required for the modeling process were dropped. Then, tokenization was performed on the textual data to break it down into individual words or tokens. Stop words, such as "a", "an", "the", etc., were removed from the text since they do not add much meaning to the text. Lemmatization was also performed to reduce the inflected forms of words to their base form, so that similar words with the same meaning would be treated as the same. Stemming was also performed. The target variable y was encoded to convert categorical data to numerical data. Then, the feature matrix X was vectorized, so that the textual data could be represented in a numerical form, which could be used as input for the machine learning models. Finally SMOTE was done to deal with the class imbalance.
 
-* Model Selection: A series of classification models were run on the data and evaluated on three metrics: Average Macro Recall, a balanced Recall score for each class, and overall accuracy.
+* Model Selection.The following models were developed: Multinomial Naive Bayes Model had a recall score of 0.23 and a f1 score of 0.37.
+Decision Tree Classifier had a recall score of 0.26 and a f1 score of 0.54.
+Support Vector Machine (SVM) implemented had a recall score of 0.42 and a f1 score of 0.62. The scores remained the same despite conducting hyper parameter tunning.
+Random Forest Classifier had a recall score of 0.23 and a f1 score of 0.64.
+From the scores. above, SVM was selected as it had a balanced and better score compared to the other models..
 
 # Conclusion
 
