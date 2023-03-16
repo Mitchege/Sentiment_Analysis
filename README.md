@@ -211,3 +211,50 @@ tweet_df.rename(columns = {'tweet_text': 'Tweet','emotion_in_tweet_is_directed_a
                 inplace = True)
 		
 tweet_df.tail()
+
+The dataframe contains very long column names that can be made more easier to deal with by renaming them.
+
+## Deleting rows with no tweet data
+### # Deleting rows with no tweet data
+
+df_clean = tweet_df.dropna(subset=['Tweet'])
+
+### Confirming that the row was deleted
+
+df_clean.info()
+
+0   Tweet    9092 non-null   object
+
+1   Product  3291 non-null   object
+ 
+2   Emotion  9092 non-null   object
+
+It was noted that the column Tweet had missing information. Seeing as this was only one row in a dataset containing 9000+ rows and there is no way to find out the contents of the tweet, it was dropped.
+
+### Deleting tweet not in English
+
+df_clean = df_clean.drop(9092, axis = 0)
+df_clean
+
+### Deleting rows with "I can't tell"
+
+df_clean = df_clean[df_clean.Emotion != "I can't tell"]
+
+df_clean['Emotion'].unique()
+
+array(['Negative emotion', 'Positive emotion',
+       'No emotion toward brand or product'], dtype=object)
+       
+
+Since no information can be gained from the narration **"I can't tell"** ,the 156 rows were dropped.
+
+## Filling missing values
+### Checking for unique itemns under product
+
+df_clean['Product'].unique()
+
+array(['iPhone', 'iPad or iPhone App', 'iPad', 'Google', nan, 'Android',
+
+       'Apple', 'Android App', 'Other Google product or service',
+       
+       'Other Apple product or service'], dtype=object)
