@@ -7,3 +7,32 @@ Introduction: Company Goku is going to launch a new mobile phone soon. They are 
 Problem Statement: The problem at hand is to build an NLP model that can analyze Twitter sentiment about Apple and Google products, which have the largest market dominance in the industry. The dataset comprises over 9,000 Tweets that have been rated by human raters as positive, negative, or neutral. This project aims to address the challenge faced by tech companies in understanding customer sentiment towards their products and gain valuable insights from customer feedback. This will improve customer satisfaction and enable Company Goku to stay ahead of the competition in the highly competitive tech industry.
 
 Main Objective: Create a Sentiment Analysis model that can accurately predict whether tweets about the phone are positive, negative, or neutral.
+### b) Defining the Metric for Success
+The model will be considered a success if the model has an accuracy of 75%, a recall of 70% and macro-average recall 75%
+### c) Recording the Experimental Design
+1.Data Collection
+
+2.Reading the Data
+
+3.Checking the Data
+
+4.External Data Source Validation
+
+5.Data Cleaning
+
+6.Exploratory Data Analysis
+
+7.Data Modeling
+
+8.Observations from the model
+
+9.Conclusion
+
+10.Recommendations
+
+11.Future Improvement Ideas
+### d) Data Understanding
+Feature	Contents
+Text_data	This column contains tweets in terms of text data about the different brands and products.
+Emotion_in_tweet_is directed_at	This column contains data on the different services and products of different brands that the text is associated with. It contains a meaningful relationship between the brand and potential customers which describes basic emotions.
+Is_therea_an_emotion directed at the brand	Contains the classification based on the Emotion_in_tweet_is directed_at column, for example positive, negative, and neutral.
