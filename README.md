@@ -11,9 +11,7 @@ Main Objective: Create a Sentiment Analysis model that can accurately predict wh
 The model will be considered a success if the model has an accuracy of 75%, a recall of 70% and macro-average recall 75%
 ### c) Recording the Experimental Design
 1.Data Collection
-
 2.Reading the Data
-
 3.Checking the Data
 
 4.External Data Source Validation
