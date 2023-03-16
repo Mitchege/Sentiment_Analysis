@@ -258,3 +258,29 @@ array(['iPhone', 'iPad or iPhone App', 'iPad', 'Google', nan, 'Android',
        'Apple', 'Android App', 'Other Google product or service',
        
        'Other Apple product or service'], dtype=object)
+       
+
+# Creating a function for filling nan values in product
+
+
+def categorize_devices(df, col_name, keywords=['iphone', 'apple', 'ipad', 'android', 'google']):
+
+    # Convert column to lowercase string
+    
+    df[col_name] = df[col_name].astype(str).str.lower()
+    
+    # Initialize category column with 'Unknown'
+    df['category'] = 'Unknown'
+    
+    # Categorize each row based on keywords
+    for i, row in df.iterrows():
+        text = row[col_name]
+        if any(keyword in text for keyword in ['iphone', 'apple', 'ipad']):
+            df.loc[i, 'category'] = 'Apple'
+        elif 'android' in text:
+            df.loc[i, 'category'] = 'Android'
+        elif 'google' in text:
+            df.loc[i, 'category'] = 'Google'
+    
+    return df
+
