@@ -234,7 +234,22 @@ It was noted that the column Tweet had missing information. Seeing as this was o
 ### Deleting tweet not in English
 
 df_clean = df_clean.drop(9092, axis = 0)
+
 df_clean
+
+
+    Tweet	Product	Emotion
+    0	.@wesley83 I have a 3G iPhone. After 3 hrs twe...	iPhone	Negative emotion
+    1	@jessedee Know about @fludapp ? Awesome iPad/i...	iPad or iPhone App	Positive emotion
+    2	@swonderlin Can not wait for #iPad 2 also. The...	iPad	Positive emotion
+    3	@sxsw I hope this year's festival isn't as cra...	iPad or iPhone App	Negative emotion
+    4	@sxtxstate great stuff on Fri #SXSW: Marissa M...	Google	Positive emotion
+    ...	...	...	...
+    9087	@mention Yup, but I don't have a third app yet...	NaN	No emotion toward brand or product
+    9088	Ipad everywhere. #SXSW {link}	iPad	Positive emotion
+    9089	Wave, buzz... RT @mention We interrupt your re...	NaN	No emotion toward brand or product
+    9090	Google's Zeiger, a physician never reported po...	NaN	No emotion toward brand or product
+    9091	Some Verizon iPhone customers complained their...	NaN	No emotion toward brand or product
 
 ### Deleting rows with "I can't tell"
 
