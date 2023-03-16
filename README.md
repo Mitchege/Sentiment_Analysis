@@ -142,3 +142,72 @@ tweet_df.info()
  2   is_there_an_emotion_directed_at_a_brand_or_product  9093 non-null   object
  
  
+It can be noted that some columns in tweet_df contain null values. This will be tidied under data cleaning before any analysis is done.
+
+### Check for the percentage of missing data
+
+tweet_df.isna().sum()*100/len(tweet_df)
+
+tweet_text                                             0.010997
+
+emotion_in_tweet_is_directed_at                       63.807324
+
+is_there_an_emotion_directed_at_a_brand_or_product     0.000000
+
+dtype: float64
+
+The column product has 5802 missing values which is 63.8% of the data. This is a significant amount of the data and even though the column may be usefull, the objective is to predict the sentiment (positive, negative, or neutral) expressed in the tweets related to a particular topic or brand and so the column should may be dropped later.
+
+### Checking for emotion_in_tweet_is_directed_at value counts
+
+value_counts1 = tweet_df['emotion_in_tweet_is_directed_at'].value_counts()
+value_counts1
+
+iPad                               946
+
+Apple                              661
+
+iPad or iPhone App                 470
+
+Google                             430
+
+iPhone                             297
+
+Other Google product or service    293
+
+Android App                         81
+
+Android                             78
+
+Other Apple product or service      35
+
+Name: emotion_in_tweet_is_directed_at, dtype: int64
+
+### Checking for is_there_an_emotion_directed_at_a_brand_or_prouct value counts
+
+value_counts2 = tweet_df['is_there_an_emotion_directed_at_a_brand_or_product'].value_counts()
+value_counts2
+
+No emotion toward brand or product    5389
+
+Positive emotion                      2978
+
+Negative emotion                       570
+
+I can't tell                           156
+
+Name: is_there_an_emotion_directed_at_a_brand_or_product, dtype: int64
+
+The dataset is now ready for cleaning and farther analysis
+
+## 4. Cleaning the Dataset
+
+### 4.1 Renaming columns 
+
+#### Renaming the columns 
+
+tweet_df.rename(columns = {'tweet_text': 'Tweet','emotion_in_tweet_is_directed_at':'Product',
+                           'is_there_an_emotion_directed_at_a_brand_or_product':'Emotion'},
+                inplace = True)
+		
+tweet_df.tail()
