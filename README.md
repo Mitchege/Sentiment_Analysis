@@ -23,7 +23,17 @@ The data is provided by [CrowdFlower](https://data.world/crowdflower) and is ava
 
 # Conclusion
 
+* Acquire more labeled Tweets to improve the model
 
+The dataset used to train this model is relatively small, about 8500 tweets.  Retraining the model on a larger dataset should improve its performance.
+
+* Expand the scope of the sentiment analysis monitoring
+
+There is plenty of other publicly available text data that can be acquired and monitored for sentiment.  This data may be on other social media platforms or public forums, or could be product reviews. While product reviews often have an associated rating, that rating may differ from the overall sentiment of the review.  Classifying this other data will require a new model because its structure would differ from a tweet.
+
+* Add granularity to the sentiment analysis
+
+Some text data is going to be more negative or more positive than others.  By creating a scale from very negative to somewhat negative to neutral to somewhat positive to very positive, more nuance will be able to be found in the sentiment analysis, and actions can be taken based on the severity of the situation.
 
 # Recommendations
 
