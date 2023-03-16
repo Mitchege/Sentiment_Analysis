@@ -37,7 +37,7 @@ From the scores. above, SVM was selected as it had a balanced and better score c
 6. The company should continuously update and improve the model as new data becomes available to ensure the most accurate and effective analysis possible. This could lead to an improvement of the model in the long run.
 
 
-# Future Work
+# Future Improvement Ideas
 * Acquire more labeled Tweets to improve the model
 
 The dataset used to train this model is relatively small, about 9000 tweets.  Retraining the model on a larger dataset should improve its performance.
