@@ -38,8 +38,7 @@ The model will be considered a success if the model has an accuracy of 75%, a re
 
 ## Reading the Data
 # Loading the required libraries 
-
-import pandas as pd
+import pandas as pd\n
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
