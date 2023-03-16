@@ -25,7 +25,10 @@ Random Forest Classifier had a recall score of 0.23 and a f1 score of 0.64.
 From the scores. above, SVM was selected as it had a balanced and better score compared to the other models..
 
 # Conclusion
-
+1. Neutral emotions had the highest frequency at 5,500 words, positive at 2,900 and negative at 600 words.
+2. Apple products had the highest mention followed by google. The least mentions were from the Android app.
+3. The best performing model in this analysis was the Support Vector Machine and was tuned with  C=1000, gamma=0.01 and kernel='rbf'. The SVM model had a recall and an accuracy score of 65% which is a balanced score compared to the other models. The recall score is important as it ensures that the model correctly identifies the true positives. This model ensures that the 65% of negative scores are placed in their right class as the magnitude of classifying a negative as any other emotion is much greater than any other misclassification.
+4. Even though our model may not have the highest level of accuracy, implementing automated mobile sentiment analysis would represent a positive move towards effectively keeping track of Twitter users' attitudes towards Company Goku's latest mobile phone.
 
 
 # Recommendations
