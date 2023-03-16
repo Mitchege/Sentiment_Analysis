@@ -299,3 +299,70 @@ df_clean['Product'].unique()
     
     return df
 
+### Creating a subset of df_clean where product is nan
+
+df_missing = df_clean[df_clean['Product'].isna() == True]
+
+categorize_devices(df_missing,"Tweet").head()
+
+
+
+    Tweet	Product	Emotion	category
+    5	@teachntech00 new ipad apps for #speechtherapy...	NaN	No emotion toward brand or product	Apple
+    16	holler gram for ipad on the itunes app store -...	NaN	No emotion toward brand or product	Apple
+    32	attn: all #sxsw frineds, @mention register fo...	NaN	No emotion toward brand or product	Android
+    33	anyone at #sxsw want to sell their old ipad?	NaN	No emotion toward brand or product	Apple
+    34	anyone at #sxsw who bought the new ipad want ...	NaN	No emotion toward brand or product	Apple
+    
+
+### Updating df_clean product with values extrapolated from df_missing
+
+df_clean['Product_updated'] = df_clean['Product'].fillna(df_missing['category'])
+
+df_clean['Product_updated'].unique()
+
+    array(['iPhone', 'iPad or iPhone App', 'iPad', 'Google', 'Apple',
+       'Android', 'Android App', 'Other Google product or service',
+       'Unknown', 'Other Apple product or service'], dtype=object)
+
+### Dropping df_clean Product
+
+df_clean = df_clean.drop(columns = ['Product'], axis = 1)
+
+df_clean.info()
+
+	<class 'pandas.core.frame.DataFrame'>
+	Int64Index: 8935 entries, 0 to 9091
+	Data columns (total 3 columns):
+ 	#   Column           Non-Null Count  Dtype 
+	---  ------           --------------  ----- 
+	 0   Tweet            8935 non-null   object
+	 1   Emotion          8935 non-null   object
+	 2   Product_updated  8935 non-null   object
+	dtypes: object(3)
+	memory usage: 279.2+ KB
+	
+There were about 5,802 missing values for the column Product, the Tweet column was analysed and any mention of words like "Google", "ipad","Apple" etc. were then used to replace the missing values. While dropping the missing values was an option the missing data was too large to take this approach.
+
+## Data anonymization of handles
+
+### Data anonymization of handles
+
+df_clean.Tweet = df_clean.Tweet.apply(lambda x: re.sub("@[A-Za-z0-9]+", "", x))
+
+df_clean.Tweet
+
+	0       . I have a 3G iPhone. After 3 hrs tweeting at ...
+	1        Know about  ? Awesome iPad/iPhone app that yo...
+		2        Can not wait for #iPad 2 also. They should sa...
+	3        I hope this year's festival isn't as crashy a...
+	4        great stuff on Fri #SXSW: Marissa Mayer (Goog...
+                           	   ...                        
+	9087     Yup, but I don't have a third app yet. I'm on...
+	9088                        Ipad everywhere. #SXSW {link}
+	9089    Wave, buzz... RT  We interrupt your regularly ...
+	9090    Google's Zeiger, a physician never reported po...
+	9091    Some Verizon iPhone customers complained their...
+	Name: Tweet, Length: 8935, dtype: object
+	
+The handles of the specific users were dropped to protect their identities and maintain data privacy.
