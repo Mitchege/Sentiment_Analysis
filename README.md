@@ -29,7 +29,12 @@ From the scores. above, SVM was selected as it had a balanced and better score c
 
 
 # Recommendations
-
+1. Company Goku should utilize the model to keep track of the general sentiment towards the mobile phone industry and also to observe the attitudes of people towards competing products.
+2. Company Goku  to utilize Twitter's API to screen and select tweets containing relevant hashtags and text related to their mobile phone. These chosen tweets can then be evaluated by the model to determine their sentiment, providing a means to monitor and keep up-to-date with the current attitudes of Twitter users towards their product.
+3. The model would be useful to the company as they can use it to identify users sentiments about thier products and act upon this. They could use the positive tweets to build on their strengths and use the negative ones to identify potential growth areas.
+4. The company can consider building and incorporating features similar to Apple phones as they have the most positive sentiments among all brands and products.
+5. Establish a notification system that can keep a check on any alterations in sentiment, allowing for swift action to be taken.
+6. The company should continuously update and improve the model as new data becomes available to ensure the most accurate and effective analysis possible. This could lead to an improvement of the model in the long run.
 
 
 # Future Work
