@@ -102,3 +102,8 @@ from sklearn.model_selection import train_test_split
 
 
 import warnings
+
+#Loading the data 
+
+tweet_df = pd.read_csv("judge-1377884607_tweet_product_company.csv",encoding='ISO-8859-1')
+tweet_df.head()
