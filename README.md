@@ -32,7 +32,6 @@ The model will be considered a success if the model has an accuracy of 75%, a re
 
 11.Future Improvement Ideas
 ### d) Data Understanding
-Feature	Contents
-Text_data	This column contains tweets in terms of text data about the different brands and products.
-Emotion_in_tweet_is directed_at	This column contains data on the different services and products of different brands that the text is associated with. It contains a meaningful relationship between the brand and potential customers which describes basic emotions.
-Is_therea_an_emotion directed at the brand	Contains the classification based on the Emotion_in_tweet_is directed_at column, for example positive, negative, and neutral.
+1) Text_data : This column contains tweets in terms of text data about the different brands and products.
+2) Emotion_in_tweet_is directed_at : This column contains data on the different services and products of different brands that the text is associated with. It contains a meaningful relationship between the brand and potential customers which describes basic emotions.
+3) Is_therea_an_emotion directed at the brand :	Contains the classification based on the Emotion_in_tweet_is directed_at column, for example positive, negative, and neutral.
