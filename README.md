@@ -125,9 +125,21 @@ An understanding of the data is critical for optimum results. The size of the da
 ### Previewing the top of our dataset
 tweet_df.head()
 
-tweet_text	emotion_in_tweet_is_directed_at	is_there_an_emotion_directed_at_a_brand_or_product
-0	.@wesley83 I have a 3G iPhone. After 3 hrs twe...	iPhone	Negative emotion
-1	@jessedee Know about @fludapp ? Awesome iPad/i...	iPad or iPhone App	Positive emotion
-2	@swonderlin Can not wait for #iPad 2 also. The...	iPad	Positive emotion
-3	@sxsw I hope this year's festival isn't as cra...	iPad or iPhone App	Negative emotion
-4	@sxtxstate great stuff on Fri #SXSW: Marissa M...	Google	Positive emotion
+### Previewing the bottom of our dataset
+
+tweet_df.tail()
+
+### Checking whether each column has an appropriate datatype
+
+tweet_df.info()
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 9093 entries, 0 to 9092
+Data columns (total 3 columns):
+ #   Column                                              Non-Null Count  Dtype 
+---  ------                                              --------------  ----- 
+ 0   tweet_text                                          9092 non-null   object
+ 1   emotion_in_tweet_is_directed_at                     3291 non-null   object
+ 2   is_there_an_emotion_directed_at_a_brand_or_product  9093 non-null   object
+dtypes: object(3)
+memory usage: 213.2+ KB
