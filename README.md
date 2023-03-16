@@ -38,14 +38,6 @@ From the scores. above, SVM was selected as it had a balanced and better score c
 
 
 # Future Improvement Ideas
-* Acquire more labeled Tweets to improve the model
-
-The dataset used to train this model is relatively small, about 9000 tweets.  Retraining the model on a larger dataset should improve its performance.
-
-* Expand the scope of the sentiment analysis monitoring
-
-There is plenty of other publicly available text data that can be acquired and monitored for sentiment.  This data may be on other social media platforms or public forums, or could be product reviews. While product reviews often have an associated rating, that rating may differ from the overall sentiment of the review.  Classifying this other data will require a new model because its structure would differ from a tweet.
-
-* Enhance the level of detail in the analysis of emotions.
-
-Some text data is going to be more negative or more positive than others.  By creating a scale from very negative to somewhat negative to neutral to somewhat positive to very positive, more nuance will be able to be found in the sentiment analysis, and actions can be taken based on the severity of the situation.
+1. Improve the granularity of emotional analysis by incorporating a more detailed scale. Not all text data will express the same level of negativity or positivity. To address this, using a scale that ranges from very negative to somewhat negative, neutral, somewhat positive, and very positive, can help to identify the subtleties in the sentiment analysis. This approach can enable taking appropriate actions according to the severity of the situation.
+2. Broaden the range of the sentiment analysis monitoring by including additional publicly accessible text data sources. There are several sources like public forums or other social media platforms, as well as product reviews, which can provide valuable insights into the overall sentiment towards a product. Though product reviews typically include a rating, the overall sentiment may not always be accurately represented by the rating. A new model is necessary to classify this type of data, as it has a different structure than tweets.
+3. Obtain additional labeled Tweets to enhance the model's accuracy. The current dataset utilized for training the model is comparatively limited, comprising approximately 9000 tweets. Rebuilding the model with a more extensive dataset is expected to boost its efficacy.
