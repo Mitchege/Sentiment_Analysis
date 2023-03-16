@@ -104,8 +104,6 @@ from sklearn.model_selection import train_test_split
 import warnings
 
 ### Loading the data 
-tweet_df = pd.read_csv("judge-1377884607_tweet_product_company.csv",encoding='ISO-8859-1')
-tweet_df.head()
 	tweet_text	emotion_in_tweet_is_directed_at	is_there_an_emotion_directed_at_a_brand_or_product
 0	.@wesley83 I have a 3G iPhone. After 3 hrs twe...	iPhone	Negative emotion
 1	@jessedee Know about @fludapp ? Awesome iPad/i...	iPad or iPhone App	Positive emotion
