@@ -133,13 +133,12 @@ tweet_df.tail()
 
 tweet_df.info()
 
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 9093 entries, 0 to 9092
-Data columns (total 3 columns):
- #   Column                                              Non-Null Count  Dtype 
----  ------                                              --------------  ----- 
  0   tweet_text                                          9092 non-null   object
+ 
+
  1   emotion_in_tweet_is_directed_at                     3291 non-null   object
+ 
+ 
  2   is_there_an_emotion_directed_at_a_brand_or_product  9093 non-null   object
-dtypes: object(3)
-memory usage: 213.2+ KB
+ 
+ 
