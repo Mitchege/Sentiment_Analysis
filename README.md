@@ -253,7 +253,7 @@ Since no information can be gained from the narration **"I can't tell"** ,the 15
 
 df_clean['Product'].unique()
 
-array(['iPhone', 'iPad or iPhone App', 'iPad', 'Google', nan, 'Android',
+     array(['iPhone', 'iPad or iPhone App', 'iPad', 'Google', nan, 'Android',
 
        'Apple', 'Android App', 'Other Google product or service',
        
@@ -263,7 +263,7 @@ array(['iPhone', 'iPad or iPhone App', 'iPad', 'Google', nan, 'Android',
 # Creating a function for filling nan values in product
 
 
-def categorize_devices(df, col_name, keywords=['iphone', 'apple', 'ipad', 'android', 'google']):
+    def categorize_devices(df, col_name, keywords=['iphone', 'apple', 'ipad', 'android', 'google']):
 
     # Convert column to lowercase string
     
